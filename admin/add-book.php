@@ -1,4 +1,4 @@
-<?php
+6<?php
 session_start();
 error_reporting(0);
 include('includes/config.php');
@@ -81,7 +81,7 @@ Book Info
 <form role="form" method="post">
 <div class="form-group">
 <label>Book Name<span style="color:red;">*</span></label>
-<input class="form-control" type="text" name="bookname" autocomplete="off"  required />
+<input class="form-control" type="text"  name="bookname" pattern="[A-Za-z]+" autocomplete="off"  required />
 </div>
 
 <div class="form-group">
@@ -128,18 +128,19 @@ foreach($results as $result)
 
 <div class="form-group">
 <label>ISBN Number<span style="color:red;">*</span></label>
-<input class="form-control" type="text" name="isbn"  required="required" autocomplete="off"  />
+<!-- <input class="form-control" type="number" name="isbn" pattern="^[0-9]{4}" required="required" autocomplete="off"  /> -->
+<input class="form-control" type="number"  name="isbn"  min="1000" max="9999" autocomplete="off"   required="required" />
 <p class="help-block">An ISBN is an International Standard Book Number.ISBN Must be unique</p>
 </div>
  
  <div class="form-group">
  <label>No of Copies<span style="color:red;">*</span></label>
- <input class="form-control" type="text" name="copies" autocomplete="off"   required="required" />
+ <input class="form-control" type="number"  name="copies" min="1" max="100" autocomplete="off"   required="required" />
  </div>
  
  <div class="form-group">
  <label>Price<span style="color:red;">*</span></label>
- <input class="form-control" type="text" name="price" autocomplete="off"   required="required" />
+ <input class="form-control" type="number"  name="price"  min="100" max="5000"   autocomplete="off"   required="required" />
  </div>
 <button type="submit" name="add" class="btn btn-info">Add </button>
 

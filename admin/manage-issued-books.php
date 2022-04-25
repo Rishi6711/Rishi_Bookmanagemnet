@@ -48,7 +48,7 @@ else{
 <div class="alert alert-danger" >
  <strong>Error :</strong> 
  <?php echo htmlentities($_SESSION['error']);?>
-<?php echo htmlentities($_SESSION['error']="");?>
+<?php echo htmlentities($_SESSION['error']="");?>   
 </div>
 </div>
 <?php } ?>
@@ -104,12 +104,25 @@ else{
                                     </thead>
                                     <tbody>
 <?php $sql = "SELECT tblstudents.FullName,tblbooks.BookName,tblbooks.ISBNNumber,tblbooks.id,tblissuedbookdetails.IssuesDate,tblissuedbookdetails.ReturnDate,tblissuedbookdetails.id as rid from  tblissuedbookdetails join tblstudents on tblstudents.StudentId=tblissuedbookdetails.StudentId join tblbooks on tblbooks.id=tblissuedbookdetails.BookId order by tblissuedbookdetails.id desc";
+
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=1;
 if($query->rowCount() > 0)
 {
+    
+    function write_to_console($data) {
+        $console = $data;
+        if (is_array($console))
+        $console = implode(',', $console);
+       
+    }
+    //    write_to_console("Hello World!");
+    // write_to_console($results);
+    echo "<script>console.log('Console: "  . $results . "' );</script>";
+    
+
 foreach($results as $result)
 {               ?>                                      
                                         <tr class="odd gradeX">

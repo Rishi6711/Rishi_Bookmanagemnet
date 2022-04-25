@@ -110,18 +110,18 @@ foreach($results as $result)
 
 <div class="form-group">
 <label>Enter Full Name</label>
-<input class="form-control" type="text" name="fullanme" value="<?php echo htmlentities($result->FullName);?>" autocomplete="off" required />
+<input class="form-control" type="text" name="fullanme" pattern="[a-zA-Z]+" value="<?php echo htmlentities($result->FullName);?>" autocomplete="off" required />
 </div>
 
 
 <div class="form-group">
 <label>Mobile Number :</label>
-<input class="form-control" type="text" name="mobileno" maxlength="10" value="<?php echo htmlentities($result->MobileNumber);?>" autocomplete="off" required />
+<input class="form-control" type="tel" name="mobileno" pattern="[0-9]{10}"  value="<?php echo htmlentities($result->MobileNumber);?>" autocomplete="off" required />
 </div>
                                         
 <div class="form-group">
 <label>Enter Email</label>
-<input class="form-control" type="email" name="email" id="emailid" value="<?php echo htmlentities($result->EmailId);?>"  autocomplete="off" required readonly />
+<input class="form-control" type="email" name="email" id="emailid" value="<?php echo htmlentities($result->EmaidlId);?>"  autocomplete="off" required  />
 </div>
 <?php }} ?>
                               

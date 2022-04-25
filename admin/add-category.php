@@ -86,7 +86,7 @@ Category Info
 <form role="form" method="post">
 <div class="form-group">
 <label>Category Name</label>
-<input class="form-control" type="text" name="category" autocomplete="off" required />
+<input class="form-control" type="text" name="category" pattern="[A-Za-z]{5}" autocomplete="off" required />
 </div>
 <div class="form-group">
 <label>Status</label>

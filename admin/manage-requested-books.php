@@ -119,7 +119,7 @@ foreach($results as $result)
                                             <td class="center"><?php echo htmlentities($result->StudName);?></td>
                                             <td class="center"><?php echo htmlentities($result->BookName);?></td>
                                             <td class="center"><?php echo htmlentities($result->CategoryName);?></td>
-                                            <td class="center"><?php echo htmlentities($result->AuthorName);?></td>
+                                            <td class="center"><?php echo htmlentities($result->AuthoISBNNumberrName);?></td>
                                             <td class="center"><?php echo htmlentities($result->ISBNNumber);?></td>
                                             <td class="center"><?php echo htmlentities($result->BookPrice);?></td>
 											<td class="center"><a href="issue-book2.php?ISBNNumber=<?php echo $result->ISBNNumber;?>&StudentID=<?php echo $result->StudentID;?>"><i class="fa fa-edit "></i></a> Issue&nbsp;&nbsp;</td>

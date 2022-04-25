@@ -135,14 +135,13 @@ Issue a New Book
 
 <div class="form-group">
 <label>Book ID<span style="color:red;">*</span></label>
-<input class="form-control" type="text" name="bookid" id="bookid" onBlur="getbook()"  required="required" />
+<input class="form-control" type="number" name="bookid"  id="bookid"  required="required" />
 </div>
 
  <div class="form-group">
   <label>Book Title<span style="color:red;">*</span></label>
-  <select  class="form-control" name="bookdetails" id="get_book_name" readonly>
+  <input   class="form-control" name="bookdetails"   pattern="[A-Za-z]+"  id="get_book_name" required="required" />
    
- </select>
  </div>
   <div class="form-group">
 <button type="submit" name="issue" id="submit" class="btn btn-info">Issue Book </button>

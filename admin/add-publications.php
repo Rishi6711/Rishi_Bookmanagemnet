@@ -1,4 +1,4 @@
-<?php
+u<?php
 session_start();
 error_reporting(0);
 include('includes/config.php');
@@ -71,7 +71,7 @@ Publication Info
 <form role="form" method="post">
 <div class="form-group">
 <label>Publication Name</label>
-<input class="form-control" type="text" name="author" autocomplete="off"  required />
+<input class="form-control" type="text" name="author" pattern="[A-Za-z]{5}" autocomplete="off"  required />
 </div>
 
 <button type="submit" name="create" class="btn btn-info">Add </button>

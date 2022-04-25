@@ -15,7 +15,6 @@ require_once 'includes/config.php';
 			<th>Student Name</th>
 			<th>Student ID</th>
 			<th>Phone Number</th>
-			<th>Fine</th>
 		</tr>
 
 		<tr>';
@@ -31,10 +30,8 @@ require_once 'includes/config.php';
 				<td><center>'.$result->StudentName.'</center></td>
 				<td><center>'.$result->StudentID.'</center></td>
 				<td><center>'.$result->MobNumber.'</center></td>
-				<td><center>'.$result->Fine.'</center></td>
 			</tr>';	
 			$cnt+=1;
-			$totalcredit+=$result->Fine;
 		}
 		}
 		$table .= '

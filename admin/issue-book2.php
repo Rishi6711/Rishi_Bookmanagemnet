@@ -12,7 +12,8 @@ if(isset($_POST['issue']))
 {
 
 $studentid=strtoupper($_POST['studentid']);
-$bookid=$_POST['bookdetails'];
+
+$bookid=$_POST['ISBNNumber'];
 $sql="INSERT INTO  tblissuedbookdetails(StudentID,BookId) VALUES(:studentid,:bookid)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':studentid',$studentid,PDO::PARAM_STR);
@@ -138,13 +139,9 @@ $stdid=$_GET['StudentID'];
 
 <div class="form-group">
 <label>BookID<span style="color:red;">*</span></label>
-<input class="form-control" type="text" name="booikid" id="bookid" value="<?php echo htmlentities($bookid);?>" onBlur="getbook()"  required="required" />
+<input class="form-control" type="text" name="booikid" id="bookid" value="<?php echo htmlentities($bookid);?>"  required="required" />
 </div>
 
- <div class="form-group">
-  Book Title<select  class="form-control" name="bookdetails" id="get_book_name" readonly> 
- </select>
- </div>
 											
 <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>

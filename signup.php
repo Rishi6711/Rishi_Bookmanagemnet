@@ -116,13 +116,13 @@ error:function (){}
                             <form name="signup" method="post" onSubmit="return valid();">
 <div class="form-group">
 <label>Enter Full Name</label>
-<input class="form-control" type="text" name="fullanme" autocomplete="off" required />
+<input class="form-control" type="text" name="fullanme" pattern="[a-zA-Z]+" autocomplete="off" required />
 </div>
 
 
 <div class="form-group">
 <label>Mobile Number :</label>
-<input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
+<input class="form-control" type="tel" name="mobileno" pattern="[0-9]{10}" autocomplete="off" required />
 </div>
                                         
 <div class="form-group">
